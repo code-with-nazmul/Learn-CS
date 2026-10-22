@@ -44,3 +44,13 @@ nav :
   - Algorithms: 
     - Algorithms main page : Algorithms/algorithms-main-page.md
     - Binary Search: Algorithms/binary-search.md
+  - Data Structure:
+    - Data structure main page: Data-Structure/ds-main-page.md
+  - Database:
+    - Database main page: Database/database-main-page.md
+  - OOP:
+    - OOP main page: oop/oop-main-page.md
+  - Networking:
+    - Networking main page: Networking/networking-main-page.md
+  - Operating System:
+    - Operating System main page: OS/os-main-page.md
