@@ -164,7 +164,63 @@
 			```
 
 ???+ "Polymorphism"
-	Start from this section ---
+	- Definition: Polymorphism means many forms. It allows the same method to have different behaviors depending on the object.
+
+	- Because of polymorphism same method/interface behaves differently based on the object (e.g., method overriding/overloading).
+
+	There are two types of polymorphism
+		- Compile time polymorphism (Method overloading)and Runtime polymorphism (Method overriding)
+
+	??? "Method Overloading (Compile time polymorphism)"
+		Overloading occurs when multiple methods in the same class have the same name, but different parameters (different types, number, or sequence of arguments).
+		```java
+			class Calculator {
+				// Method 1: Adds two integers
+				int add(int a, int b) {
+					return a + b;
+				}
+
+				// Overloaded Method 2: Adds three integers
+				int add(int a, int b, int c) {
+					return a + b + c;
+				}
+
+				// Overloaded Method 3: Adds two double values
+				double add(double a, double b) {
+					return a + b;
+				}
+			}
+		```	
+	??? "Method Overriding (Run-time polymorphism)"
+		Overriding occurs when a subclass (child class) provides its own specific implementation of a method that is already defined in its superclass (parent class). The method in both classes must have the exact same name, return type, and parameters
+
+		```java
+			// Parent Class
+			class Animal {
+				void makeSound() {
+					System.out.println("Animal makes a sound");
+				}
+			}
+
+			// Child Class overriding parent method
+			class Dog extends Animal {
+				@Override
+				void makeSound() {
+					System.out.println("Dog barks"); // Custom behavior
+				}
+			}
+		```
+	??? "Overloading VS Overriding"
+		| Feature | Method Overloading | Method Overriding |
+		| :--- | :--- | :--- |
+		| **Relationship** | Occurs within the same class. | Occurs between parent and child classes (Inheritance). |
+		| **Method Signature** | Method name is same, but parameters must be different. | Method name, return type, and parameters must be identical. |
+		| **Polymorphism Type** | Compile-time (Static) polymorphism. | Run-time (Dynamic) polymorphism. |
+		| **Return Type** | Can be same or different. | Must be the same (or a covariant subtype). |
+		| **Private/Static Methods** | Can be overloaded. | Cannot be overridden (static methods use shadowing/hiding). |
+		| **Main Goal** | Increases readability by using one method name for different data types. | Provides a specific implementation for an inherited method. |
+
+
 
 ???+ "Example of oop in code (java)"
 ```java

@@ -15,6 +15,10 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
+# extra:
+#   generator: false
+
   features:
     - navigation.tabs
     - navigation.sections
@@ -52,6 +56,7 @@ nav :
     - OOP main page: oop/oop-main-page.md
     - OOP Fundamentals: oop/oop-fundamentals.md
     - Four pillars of OOP : oop/four-pillars-oop.md
+    - More about four pillars: oop/more-about-four-pillars.md
   - Networking:
     - Networking main page: Networking/networking-main-page.md
   - Operating System:
