@@ -223,27 +223,27 @@
 
 
 ???+ "Example of oop in code (java)"
-```java
-class Animal{
-  private String name; // Encapsulation
-  public Animal(String name){
-    this.name = name;
-  }
-  public String getName(){
-    return name;
-  }
-  
-  abstract void makeSound(); // Abstraction
-}
+	```java
+		class Animal{
+		private String name; // Encapsulation
+		public Animal(String name){
+			this.name = name;
+		}
+		public String getName(){
+			return name;
+		}
+		
+		abstract void makeSound(); // Abstraction
+		}
 
-class Dog extends Animal{ // Inheritence
-  public Dog(String name){
-    super(name);
-  }
-  
-  @Override // polymorphism
-  void makeSound(){
-    System.out.println("Dog barks");	
-  }
-}
-```
+		class Dog extends Animal{ // Inheritence
+		public Dog(String name){
+			super(name);
+		}
+		
+			@Override // polymorphism
+			void makeSound(){
+				System.out.println("Dog barks");	
+			}
+		}
+	```
