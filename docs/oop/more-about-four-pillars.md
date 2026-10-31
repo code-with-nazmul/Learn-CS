@@ -33,4 +33,13 @@
 	Here runtime polymorphism happens. And I can write Animal a1 = new Dog() because Dog IS-A Animal. But when calling the sound() method, java goes to sound() method of child class because, object type is what matters here.
 
 ???+ "Abstract VS Interface"
-	Start from here
+	Read details about Abstract and Interface in [here]:(./four-pillars-oop.md)
+
+	| Feature | Interface | Abstract Class |
+	| :--- | :--- | :--- |
+	| **Keyword** | `implements` | `extends` |
+	| **Inheritance** | A class can implement many | A class can extend only one |
+	| **State (instance fields)** | No (only constants) | Yes |
+	| **Constructors** | No | Yes |
+	| **Method types** | Abstract, default, static | Abstract and concrete |
+	| **Access modifiers** | Methods are public | Any (private, protected, etc.) |
