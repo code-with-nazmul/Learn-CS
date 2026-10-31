@@ -14,6 +14,83 @@
     - Abstract class: A class that cannot be instantiated, may have both abstract (unimplemented) and concrete methods. Forces subclasses to implement the abstract ones.
     - Interface: A fully abstract contract — only method signatures, no implementation (in most languages). A class can implement multiple interfaces.
 
+		???+ "Learn more about Interface"
+			## Definition: 
+				A interface is a contract that specifies what a class must do, without necessarily specifying how it does it.
+
+			##Some rules of interface:
+			- An interface is declared using the `interface` keyword.
+			- An interface cannot be instantiated directly
+			```java
+				Animal a = new Animal(); // Compilation error
+			```
+			However, referece can be created : ```Animal a;```
+			
+			- An interface does not have constructors: 
+			```java
+				interface Animal{
+					Animal(){} // Compilation error
+				}
+			```
+
+			- An interface can contain : 
+				- Abstract methods
+				- Default methods
+				- Static methods
+				- Private methods
+				- Constants
+				- Nested types (classes, interfaces, enums, and records) 
+			
+			- Methods declared without a body in an interface are implicitly ```public abstract```
+			```java
+				interface Animal{
+					void makeSound();
+				}
+			```
+			This is equivalent to :
+			```java
+			interface Animal{
+				public abstract void makesound();
+			}
+			```
+
+			- Abstract methods cannot have a method body
+			```java
+			interface Animal{
+				void makeSound(){
+					Sysmtem.out.println("Sound"); // Compilation error
+				}
+			}
+			```
+
+			- A class implementing an interface must implement all its abstract methods, unless the class itself is abstract.
+
+			- Methods implemented from an interface must be declared as public (because methods without body in interface are `public` by default. And sub-class cannot reduce visibility of super-class).
+			```java
+				class Dog implements Animal {
+    			@Override
+					public void makeSound() {
+							System.out.println("Woof!");
+					}
+				}
+			```
+
+			- An interface can have private methods. They must have a body and can only be used inside interface.
+
+			- All variables declared inside an interface are implicitly public static final.
+
+			- An interface can extend one or multiple interfaces using extends.
+
+			- A class uses `implements` to implement an interface.
+			```java
+				class Dog implements Animal{}
+			```
+
+			- A class can implement multiple interfaces.
+			```java
+				class Machine implements Printable, Scannable { }
+			```
+
 ???+ "Inheritence"
     - Definition: Inheritence is an OOP mechanism that allows the creation of new classes that inherit properties and methods of existing classes. 
     - It promotes code reuse and establishes a hierarchical relationship between classes.
