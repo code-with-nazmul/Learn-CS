@@ -12,9 +12,24 @@
 ???+ "Abstraction"
     - Definition: Abstraction is the process of hiding unnecessary implementation details and exposing only the essential functionality of an object.
     - Abstract class: A class that cannot be instantiated, may have both abstract (unimplemented) and concrete methods. Forces subclasses to implement the abstract ones.
+
+		??? "Rules of abstract class"
+			- It is not possible to create object of an `abstract` class
+			- Abstract class can have both abstract and non-abstract methods
+			- An abstract class can have constructors, variables, and static methods.
+			- A normal class extending an abstract class must implement all its abstract methods. 
+			- An abstract class can implement another abstract class without impolementing all its abstract methods.
+
+		??? "Rules of abstract method"
+			- An abstract method has no abstract body
+			- An abstract method must be declared inside an abstract class (or an interface)
+			- An abstract method cannot be `private`, `static`, or `final`.
+			- A subclass must override all inherited abstract methods unless the subclass is also abstract.
+			- When overriding an abstract method, it's access level cannot be reduced.
+
     - Interface: A fully abstract contract — only method signatures, no implementation (in most languages). A class can implement multiple interfaces.
 
-		???+ "Learn more about Interface"
+		??? "More about Interface"
 			## Definition: 
 				A interface is a contract that specifies what a class must do, without necessarily specifying how it does it.
 
