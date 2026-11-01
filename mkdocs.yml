@@ -57,6 +57,7 @@ nav :
     - OOP Fundamentals: oop/oop-fundamentals.md
     - Four pillars of OOP : oop/four-pillars-oop.md
     - More about four pillars: oop/more-about-four-pillars.md
+    - Access Modifiers: oop/access-modifiers.md
   - Networking:
     - Networking Overview: Networking/networking-main-page.md
   - Operating System:
